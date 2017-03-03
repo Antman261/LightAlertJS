@@ -1,3 +1,40 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+"use strict";
+var Notification = (function () {
+    function Notification(content, imageUrl, _class) {
+        this.content = content;
+        this.imageUrl = imageUrl;
+        this._class = _class;
+        this.complete = false;
+        this.fired = false;
+        this.uid = Math.floor(Math.random() * (100000 - 1)) + 1;
+    }
+    Notification.prototype.fire = function (template) {
+        this.timer = setTimeout(function (self) {
+            self.delete();
+        }, 8500, this);
+        this.fired = true;
+        return this.render(template);
+    };
+    Notification.prototype.render = function (template) {
+        var html = template.replace('{{class}}', this._class)
+            .replace('{{uid}}', this.uid)
+            .replace('{{imageUrl}}', this.imageUrl)
+            .replace('{{content}}', this.content);
+        return this.$elem = $(html);
+    };
+    Notification.prototype.delete = function () {
+        this.complete = true;
+        var _this = this;
+        this.$elem.fadeOut(300, function () {
+            _this.$elem.remove();
+        });
+    };
+    return Notification;
+}());
+exports.Notification = Notification;
+
+},{}],2:[function(require,module,exports){
 "use strict";
 var notification_1 = require("./notification");
 var NotificationService = (function () {
@@ -85,3 +122,5 @@ var NotificationService = (function () {
     return NotificationService;
 }());
 exports.NotificationService = NotificationService;
+
+},{"./notification":1}]},{},[2]);

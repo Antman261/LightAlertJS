@@ -41,7 +41,7 @@ export class NotificationService {
     let hasFiredOne = false;
     for (let i = this.notifications.length-1;i>=0; i--) {
       let notif = this.notifications[i];
-      if (notif !== undefined && notif.fired == false && hasFiredOne == false) {
+      if (notif !== undefined && notif.fired === false && hasFiredOne === false) {
         let $notifElem = notif.fire(this.template);
         if (this.append) {
           this.$elem.append($notifElem);

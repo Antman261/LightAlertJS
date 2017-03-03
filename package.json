@@ -4,7 +4,10 @@
   "description": "A lightweight notification javascript library",
   "main": "./build/lightalert.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-js & npm run build-css",
+    "build-js": "browserify src/notificationService.js | tee  build/lightalert.js | uglifyjs -mc > build/lightalert.min.js",
+    "build-css": "cleancss --skip-rebase -o build/lightalert.min.css src/lightalert.css"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,14 @@
   "bugs": {
     "url": "https://github.com/Antman261/LightAlertJS/issues"
   },
-  "homepage": "https://github.com/Antman261/LightAlertJS#readme"
+  "homepage": "https://github.com/Antman261/LightAlertJS#readme",
+  "devDependencies": {
+    "browserify-shim": "^3.8.12",
+    "clean-css": "^3.4.19",
+    "express": "^4.14.0",
+    "jsdom": "^9.8.3",
+    "minifier": "^0.8.0",
+    "mocha": "^3.0.2",
+    "mocha-jsdom": "^1.1.0"
+  }
 }
