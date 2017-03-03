@@ -1,0 +1,25 @@
+{
+  "name": "lightalertjs",
+  "version": "1.0.0",
+  "description": "A lightweight notification javascript library",
+  "main": "./build/lightalert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://antman261@github.com/Antman261/LightAlertJS.git"
+  },
+  "keywords": [
+    "Lightweight",
+    "Notifications",
+    "Alerts",
+    "LightAlertJS"
+  ],
+  "author": "Anthony Manning-Franklin <anthony.manning.franklin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antman261/LightAlertJS/issues"
+  },
+  "homepage": "https://github.com/Antman261/LightAlertJS#readme"
+}

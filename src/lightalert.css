@@ -1,0 +1,44 @@
+.notification-stack {
+  position: fixed;
+  left: 25px;
+  bottom: 25px;
+  width: 300px;
+  z-index: 99999;
+}
+.notification .bg-black {
+  color: #f1f1f1;
+  background-color: #222;
+}
+.notification .bg-success {
+  color: #FFF;
+  background-color: green;
+}
+.notification .bg-warning {
+  color: #FFF;
+  background-color: orange;
+}
+.notification .bg-error {
+  color: #FFF;
+  background-color: red;
+}
+.notification .bg-info {
+  color: #000;
+  background-color: lightblue;
+}
+.notification .bg-primary {
+  color: #FFF;
+  background-color: blue;
+}
+.notification {
+  position: relative;
+  z-index: 99999;
+  margin-top: 25px;
+  padding: 15px;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
+}
+.notification > .media > .media-body {
+  width: auto;
+}
+.notification > .media > .media-left > a > img {
+  width: 60px;
+}
