@@ -1,5 +1,5 @@
 # LightAlertJS
-A lightweight notification javascript library with customisable templates and layout.
+A lightweight notification javascript library with customisable templates and layout in just 3kB.
 
 Start by creating a service provider
 
