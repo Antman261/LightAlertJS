@@ -5,6 +5,15 @@
   width: 300px;
   z-index: 99999;
 }
+.notification {
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  z-index: 99999;
+  margin-top: 25px;
+  padding: 15px;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
+}
 .notification .bg-black {
   color: #f1f1f1;
   background-color: #222;
@@ -28,13 +37,6 @@
 .notification .bg-primary {
   color: #FFF;
   background-color: blue;
-}
-.notification {
-  position: relative;
-  z-index: 99999;
-  margin-top: 25px;
-  padding: 15px;
-  box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
 }
 .notification > .media > .media-body {
   width: auto;

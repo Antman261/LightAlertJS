@@ -1,5 +1,5 @@
 # LightAlertJS
-A lightweight notification javascript library with customisable templates and layout in just 3kB.
+A lightweight javascript notification library with customisable templates and layout in just 3kB.
 
 Start by creating a service provider
 
@@ -72,5 +72,5 @@ notificationService.debounce_seconds = 5;
 
 ## Requirements
 
-* Bootstrap 3.3
+* Bootstrap 3.3 (For default template, no CSS requirements if you provide your own)
 * jQuery 1.8+
