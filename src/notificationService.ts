@@ -97,6 +97,6 @@ export class NotificationService {
 
   private handleSessionError(e) {
     console.log(e);
-    console.error('Private browsing or disabling cookies will prevent us from saving your choices. For a better experience, please exit private browsing and enable cookies.');
+    console.error('Private browsing or disabling cookies will prevent us from saving your choices. For a better experience, please exit private browsing and/or enable cookies.');
   }
 }

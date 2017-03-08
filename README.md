@@ -1,10 +1,17 @@
 # LightAlertJS
 A lightweight javascript notification library with customisable templates and layout in just 3kB.
 
+## Installation
+
+Install via npm
+`npm install lightalertjs`
+
+## Usage
+
 Start by creating a service provider
 
 ```javascript
-var notificationService = new NotificationService({
+var lightalert = new require('lightalertjs').NotificationService({
   $elem: $("#notification-stack")
 });
 ```
@@ -12,35 +19,35 @@ var notificationService = new NotificationService({
 Then use service to create notifications
 
 ```javascript
-notificationService.notify("Hello world!")
+lightalert.notify("Hello world!")
 ```
 
 Add an image to the notification:
 
 ```javascript
-notificationService.notify("Hello world!", "https://example.com/hello.svg")
+lightalert.notify("Hello world!", "https://example.com/hello.svg")
 ```
 
 Add a class, in this case changing background and text:
 
 ```javascript
-notificationService.notify("Hello world!", "https://example.com/hello.svg", "bg-black")
+lightalert.notify("Hello world!", "https://example.com/hello.svg", "bg-black")
 
-notificationService.notify("Hello world!", "https://example.com/hello.svg", "bg-success")
+lightalert.notify("Hello world!", "https://example.com/hello.svg", "bg-success")
 
-notificationService.notify("Hello world!", "https://example.com/hello.svg", "bg-warning")
+lightalert.notify("Hello world!", "https://example.com/hello.svg", "bg-warning")
 
-notificationService.notify("Hello world!", "https://example.com/hello.svg", "bg-error")
+lightalert.notify("Hello world!", "https://example.com/hello.svg", "bg-error")
 
-notificationService.notify("Hello world!", "https://example.com/hello.svg", "bg-info")
+lightalert.notify("Hello world!", "https://example.com/hello.svg", "bg-info")
 
-notificationService.notify("Hello world!", "https://example.com/hello.svg", "bg-primary")
+lightalert.notify("Hello world!", "https://example.com/hello.svg", "bg-primary")
 ```
 
 Add a debounce timer to the service, preventing the user from receiving a notification more than once per x seconds. Makes use of [sessionStorage](https://developer.mozilla.org/en/docs/Web/API/Window/sessionStorage) to persist timer countdown across page loads.
 
 ```javascript
-var notificationService = new NotificationService({
+var lightalert = new NotificationService({
   $elem: $("#notification-stack"),
   debounce_seconds: 10
 });
@@ -49,7 +56,7 @@ var notificationService = new NotificationService({
 Change the template:
 
 ```javascript
-var notificationService = new NotificationService({
+var lightalert = new NotificationService({
   $elem: $("#notification-stack"),
   template: "<div class='notification {{class}} id='{{uid}}'><img src='{{imageUrl}}'>{{content}}</div>'"
 });
@@ -58,7 +65,7 @@ var notificationService = new NotificationService({
 Change whether new notifications are appended or prepended to the stack:
 
 ```javascript
-var notificationService = new NotificationService({
+var lightalert = new NotificationService({
   $elem: $("#notification-stack"),
   append: false
 });
@@ -67,7 +74,7 @@ var notificationService = new NotificationService({
 These settings can be changed after instantiation via properties:
 
 ```javascript
-notificationService.debounce_seconds = 5;
+lightalert.debounce_seconds = 5;
 ```
 
 ## Requirements

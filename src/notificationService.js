@@ -80,7 +80,7 @@ var NotificationService = (function () {
     };
     NotificationService.prototype.handleSessionError = function (e) {
         console.log(e);
-        console.error('Private browsing or disabling cookies will prevent us from saving your choices. For a better experience, please exit private browsing and enable cookies.');
+        console.error('Private browsing or disabling cookies will prevent us from saving your choices. For a better experience, please exit private browsing and/or enable cookies.');
     };
     return NotificationService;
 }());

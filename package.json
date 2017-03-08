@@ -2,7 +2,7 @@
   "name": "lightalertjs",
   "version": "1.0.0",
   "description": "A lightweight notification javascript library",
-  "main": "./build/lightalert.js",
+  "main": "./build/lightalert.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build-js & npm run build-css",
